@@ -1,55 +1,110 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  /* background-color: #f4f4f4; */
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  color: #333;
+}
+
+.navbar {
+  margin-bottom: 30px;
+  background-color: #18222c;
+  color: #ffffff;
+}
+
+.navbar-brand {
+  font-family: sans-serif; /* Apply the custom font */
+  font-size: 2.5rem; /* Increase the font size */
+  font-weight: bold;
+  letter-spacing: 1.5px; /* Add letter spacing for style */
+  text-transform: uppercase; /* Make it all uppercase for a bold look */
+}
+
+
 .card-wrapper {
-    margin: 5% 0;
-  }
-  
-/* You can adjust the image size by increasing/decreasing the width, height */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  background-color: #18222c;
+  /* border: 2px solid #f1c40f; */
+  color: #ecf0f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  /* background-color: rgb(185, 184, 184); */
+  background-color: #18222caa;
+}
+
 .custom-circle-image {
-  width: 10vw; /* note i used vw not px for better responsive */
-  height: 10vw;
+  width: 12vw;
+  height: 12vw;
+  border: 4px solid #dee2e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .custom-circle-image img {
   object-fit: cover;
 }
 
-.card-title {
-  letter-spacing: 1.1px;
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.card-text {
-  font-family: MerriweatherRegular;
-  font-size: 22px;
-  line-height: initial;
+.card-title {
+  letter-spacing: 1.2px;
+  font-size: 1.2rem;
+  color: #3498db;
 }
+
 
 .dropzone {
-  border-style: dashed; 
+  border-style: dashed;
+  border-width: 2px;
+  border: 2px dashed #3498db;
+  background-color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
 }
 
-
 .error {
-  font-family: MerriweatherRegular;
-  font-size: 30px;
-  line-height: initial;
-  color: blue;
+  font-size: 1.25rem;
+  color: red;
+  font-weight: 600;
   text-align: center;
 }
 
 #classTable {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
   width: 100%;
 }
 
-#classTable td, #classTable th {
-  border: 1px solid #ddd;
-  padding: 8px;
+#classTable th, #classTable td {
+  padding: 12px;
+  text-align: center;
 }
 
 #classTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
+  background-color: #2776ac;
   color: white;
+}
+
+#classTable td {
+  color: #ffffff;
+}
+
+.dz-message {
+  color: #d7d7d7;
 }
