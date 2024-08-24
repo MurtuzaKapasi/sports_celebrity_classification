@@ -6,87 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Person Classifier</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./dropzone.min.css">
     <link rel="stylesheet" href="./app.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
-    <nav class="navbar justify-content-center ">
-        <p class="navbar-brand text-uppercase font-weight-bold ">Sports Celebrity Classifier</p>
+    <nav class="navbar justify-content-center">
+        <p class="navbar-brand text-uppercase font-weight-bold">Sports Celebrity Classifier</p>
     </nav>
 
     <div class="container my-5">
-        <div class="row text-center">
-            <div class="col card-wrapper" data-player="lionel_messi">
+        <div class="row text-center justify-content-center">
+            <div class="col-md-4 card-wrapper" data-player="lionel_messi">
                 <div class="card border-0 shadow-lg">
                     <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
                         <img class="w-100 h-100" src="./images/messi.jpeg" alt="Lionel Messi">
                     </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="card-title font-weight-bold">Lionel Messi</h4>
+                    <div class="card-body text-center mt-3">
+                        <h5 class="card-title font-weight-bold">Lionel Messi</h5>
                     </div>
                 </div>
             </div>
-            <div class="col card-wrapper" data-player="maria_sharapova">
+            <div class="col-md-4 card-wrapper" data-player="maria_sharapova">
                 <div class="card border-0 shadow-lg">
                     <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
                         <img class="w-100 h-100" src="./images/sharapova.jpeg" alt="Maria Sharapova">
                     </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="card-title font-weight-bold">Maria Sharapova</h4>
+                    <div class="card-body text-center mt-3">
+                        <h5 class="card-title font-weight-bold">Maria Sharapova</h5>
                     </div>
                 </div>
             </div>
-            <div class="col card-wrapper" data-player="roger_federer">
+            <div class="col-md-4 card-wrapper" data-player="roger_federer">
                 <div class="card border-0 shadow-lg">
                     <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
                         <img class="w-100 h-100" src="./images/federer.jpeg" alt="Roger Federer">
                     </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="card-title font-weight-bold">Roger Federer</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col card-wrapper" data-player="serena_williams">
-                <div class="card border-0 shadow-lg">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/serena.jpeg" alt="Serena Williams">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="card-title font-weight-bold">Serena Williams</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col card-wrapper" data-player="virat_kohli">
-                <div class="card border-0 shadow-lg">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/virat.jpeg" alt="Virat Kohli">
-                    </div>
-                    <div class="card-body text-center mt-4">
-                        <h4 class="card-title font-weight-bold">Virat Kohli</h4>
+                    <div class="card-body text-center mt-3">
+                        <h5 class="card-title font-weight-bold">Roger Federer</h5>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row my-5">
+        <div class="row text-center justify-content-center mt-4">
+            <div class="col-md-4 card-wrapper" data-player="serena_williams">
+                <div class="card border-0 shadow-lg">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/serena.jpeg" alt="Serena Williams">
+                    </div>
+                    <div class="card-body text-center mt-3">
+                        <h5 class="card-title font-weight-bold">Serena Williams</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 card-wrapper" data-player="virat_kohli">
+                <div class="card border-0 shadow-lg">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/virat.jpeg" alt="Virat Kohli">
+                    </div>
+                    <div class="card-body text-center mt-3">
+                        <h5 class="card-title font-weight-bold">Virat Kohli</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5 justify-content-center">
             <div class="col-sm-4 text-center">
                 <form action="/file-upload" class="dropzone p-4 rounded shadow" id="dropzone">
                     <div class="dz-message needsclick">
-                        <img src="./images/upload.png" width="60" height="60"><br>
+                        <i class="fas fa-upload fa-3x mb-2"></i><br>
                         <span class="note needsclick font-weight-bold text-muted">Drop files here or click to upload</span>
                     </div>
                 </form>
-                <button id="submitBtn" type="button" class="btn btn-success mt-4 px-4">Classify</button>
+                <button id="submitBtn" type="button" class="btn btn-primary mt-4 px-5">Classify</button>
             </div>
 
-            <div class="col-sm-8 error" id="error">
+            <div class="col-sm-8 error text-center d-none" id="error">
                 <p>Can't classify image. Classifier was not able to detect face and two eyes properly.</p>
             </div>
 
-            <div class="col-sm-4 mt-1" id="resultHolder"></div>
+            <div class="col-sm-4 mt-1 " id="resultHolder"></div>
             <div class="col-sm-4" id="divClassTable">
                 <table id="classTable" class="table table-bordered table-hover">
                     <thead class="thead-dark">

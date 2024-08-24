@@ -13,7 +13,7 @@ def classify_image():
 
     response = jsonify(util.classify_image(image_data))
 
-    # response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Origin', '*')
 
     return response
 

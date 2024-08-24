@@ -1,110 +1,123 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  /* background-color: #f4f4f4; */
-  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
-  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #1c2833 0%, #34495e 100%);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
-  margin-bottom: 30px;
-  background-color: #18222c;
+  background-color: #1a252f;
+  padding: 1rem;
+  font-size: 1.5rem;
   color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .navbar-brand {
-  font-family: sans-serif; /* Apply the custom font */
-  font-size: 2.5rem; /* Increase the font size */
-  font-weight: bold;
-  letter-spacing: 1.5px; /* Add letter spacing for style */
-  text-transform: uppercase; /* Make it all uppercase for a bold look */
+  color: #f39c12;
+  font-size: 2rem;
 }
 
-
 .card-wrapper {
-  display: flex;
-  justify-content: space-evenly;
+  margin-bottom: 30px;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  height: 350px;
-  background-color: #18222c;
-  /* border: 2px solid #f1c40f; */
-  color: #ecf0f1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 5px;
-  transition: transform 0.3s ease-in-out;
+  background-color: #1a252f;
+  color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  /* background-color: rgb(185, 184, 184); */
-  background-color: #18222caa;
+  transform: translateY(-10px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
 }
 
 .custom-circle-image {
-  width: 12vw;
-  height: 12vw;
-  border: 4px solid #dee2e6;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  width: 150px;
+  height: 150px;
+  border: 5px solid #ffffff;
+  margin-top: -75px;
 }
 
 .custom-circle-image img {
   object-fit: cover;
-}
-
-.card-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  border-radius: 50%;
 }
 
 .card-title {
-  letter-spacing: 1.2px;
+  margin-top: 20px;
   font-size: 1.2rem;
-  color: #3498db;
+  font-weight: 700;
+  color: #f39c12;
 }
 
-
 .dropzone {
-  border-style: dashed;
-  border-width: 2px;
-  border: 2px dashed #3498db;
+  border: 2px dashed #f39c12;
   background-color: #ffffff;
-  font-size: 1rem;
+  padding: 30px;
   text-align: center;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropzone:hover {
+  background-color: #f5f5f5;
+  border-color: #e67e22;
 }
 
 .error {
   font-size: 1.25rem;
-  color: red;
+  color: #e74c3c;
   font-weight: 600;
-  text-align: center;
+  margin-top: 20px;
 }
 
 #classTable {
-  font-family: 'Poppins', sans-serif;
-  width: 100%;
-}
-
-#classTable th, #classTable td {
-  padding: 12px;
-  text-align: center;
-}
-
-#classTable th {
-  background-color: #2776ac;
-  color: white;
-}
-
-#classTable td {
+  background-color: #34495e;
   color: #ffffff;
 }
 
+#classTable th, #classTable td {
+  padding: 15px;
+  text-align: center;
+  border-color: #1c2833;
+}
+
+#classTable th {
+  background-color: #2c3e50;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+#classTable td {
+  background-color: #1a252f;
+}
+
 .dz-message {
-  color: #d7d7d7;
+  font-size: 1.2rem;
+}
+
+.dz-message .fas {
+  color: #f39c12;
+}
+
+button {
+  background-color: #f39c12;
+  border: none;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #e67e22;
 }
