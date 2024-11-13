@@ -16,14 +16,28 @@ function init() {
     });
 
     dz.on("complete", function (file) {
-        let imageData = file.dataURL;
+        if (!file.type.match(/image.*/)) {
+            $("#error").text("File is not an image. Please upload a valid image file.");
+            console.log("File is not an image.");
+            alert("File is not an image. Please upload a valid image file.")
+            $("#resultHolder").hide();
+            $("#divClassTable").hide();                
+            $("#error").show();
+            return;
+        }
         
+        let imageData = file.dataURL;
+        console.log("File data received:");
+
         var url = "http://127.0.0.1:5000/classify_image";
         $.post(url, {
             image_data: file.dataURL
         }, function(data, status) {
             console.log("Data received:", data);
             if (!data || data.length == 0) {
+                $("#error").text("Can't classify image. Classifier was not able to detect face and two eyes properly.");
+                console.log("No data received");
+                alert("Can't classify image. Classifier was not able to detect face and two eyes properly.")
                 $("#resultHolder").hide();
                 $("#divClassTable").hide();                
                 $("#error").show();
@@ -32,7 +46,6 @@ function init() {
 
             let match = null;
             let bestScore = -1;
-
             for (let i = 0; i < data.length; ++i) {
                 let maxScoreForThisClass = Math.max(...data[i].class_probability);
                 if (maxScoreForThisClass > bestScore) {
@@ -41,12 +54,21 @@ function init() {
                 }
             }
 
+            // if(bestScore < 70){
+            //     $("#error").text("Can't classify image.");
+            //     alert("Celebrity Not found")
+            //     $("#resultHolder").hide();
+            //     $("#divClassTable").hide();                
+            //     $("#error").show();
+            //     return;
+            // }
+
             // Reset all rows to default color
             $("#classTable tbody tr").each(function() {
                 $(this).find('td').css('color', '#ffffff'); // Default color
             });
 
-            if (match) {
+            if (data) {
                 $("#error").hide();
                 $("#resultHolder").show();
                 $("#divClassTable").show();
